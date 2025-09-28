@@ -1,80 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRACK IT!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRACK IT! | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Background Particles -->
+  <canvas id="background-canvas"></canvas>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="branding">
+      <a href="index.html" class="site-title" style="text-decoration:none;">CRACK IT!</a>
+      <p id="typing-text" data-phrases="🚀 Welcome to CRACK IT!|🚀 Explore Internships and Hackathons|🚀 Find all resources at a single place"></p>
+    </div>
+    <div class="scrolling-banner">
+      <div class="scrolling-text">
+        Prepare for your tech journey with our community of mentors and resources.
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main-content">
+
+    <!-- Navigation -->
     
-    <div class="top-bar">
-        <h1>CRACK IT!</h1>
+    <div class="content-boxes">
+      <a href="internships.html" class="content-box">
+        <span class="icon">💼</span> Internships
+      </a>
+      <a href="hackathons.html" class="content-box">
+        <span class="icon">⚡</span> Hackathons
+      </a>
+      <a href="resources.html" class="content-box">
+        <span class="icon">📚</span> Resources
+      </a>
     </div>
 
-    <main class="main-content">
-        <div id= "top-level-buttons" class="content-boxes">
-            <a href="#" class="content-box" id="internships-btn">
-                Internships
-            </a>
-            <a href="#" class="content-box" id="hackathons-btn">
-                Hackathons
-            </a>
-            <a href="#" class="content-box" id="resources-btn">
-                Resources
-            </a>
-        </div>
+    <!-- Mentors Section -->
+    <section class="seniors-section">
+      <h2><span class="highlight"><center>Our Community’s Mentors & Builders</center></span></h2>
+      <div class="senior-cards-container">
 
-        <div id="dynamic-content-area" class="dynamic-content-area">
-            
-        </div>
-        
-       
-    </main>
-    <div class="seniors-section">
-    <h2><span class="highlight">Our Community's Mentors & Builders</span></h2>
-    <div class="senior-cards-container">
         <div class="senior-card">
-            <h3>Prachi</h3>
-            <p>Built this website!</p>
-            <a href="https://www.linkedin.com/in/prachi-gupta-19ab61318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" >LinkedIn Profile</a>
+          <h3>Prachi</h3>
+          <p>Built this website!</p>
+          <a class="linkedin-btn" href="https://www.linkedin.com/in/prachi-gupta-19ab61318" target="_blank">LinkedIn Profile</a>
         </div>
+
         <div class="senior-card">
-            <h3>Mahak</h3>
-            <p>IGDTUW(CSE-AI)</p>
-            <a href="https://www.linkedin.com/in/mahak-154720287/
-" target="_blank" >LinkedIn Profile</a>
+          <h3>Mahak</h3>
+          <p>IGDTUW (CSE-AI)</p>
+          <a class="linkedin-btn" href="https://www.linkedin.com/in/mahak-154720287/" target="_blank">LinkedIn Profile</a>
         </div>
 
-    <div class="senior-card">
-        <h3>Payal Sahu</h3>
-        <p>IGDTUW(CSE-AI)</p>
-        <a href=" https://www.linkedin.com/in/payal-sahu-9a554328b/ " target="_blank">LinkedIn Profile</a>
-    </div>
-    <div class="senior-card">
-        <h3>Ipshita Dash</h3>
-        <p>VIT</p>
-        <a href="https://www.linkedin.com/in/ipsita-dash-0550b7245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">LinkedIn Profile</a>
-    </div>
-    </div>
-    </div>
-     
-    <h2><span class="highlight">Get notified!</span></h2>
-    <div class="flex-container">
-    <form action="https://formspree.io/f/xzzvwgky" method="POST" id="email-form">
-    <input type="email" name="email" placeholder="Enter your email" class="search-bar">
-    <button type="submit" class="side-btn">Notify Me!</button>
-    </form>
-    </div>
+        <div class="senior-card">
+          <h3>Payal Sahu</h3>
+          <p>IGDTUW (CSE-AI)</p>
+          <a class="linkedin-btn" href="https://www.linkedin.com/in/payal-sahu-9a554328b/" target="_blank">LinkedIn Profile</a>
+        </div>
 
-    
-    <footer class="footer-bar">
-        Build by Prachi(CSAI,IGDTUW)  
-    </footer>
+        <div class="senior-card">
+          <h3>Ipshita Dash</h3>
+          <p>VIT</p>
+          <a class="linkedin-btn" href="https://www.linkedin.com/in/ipsita-dash-0550b7245" target="_blank">LinkedIn Profile</a>
+        </div>
 
-     <audio id="click-sound" src="audio/click.mp3" preload="auto"></audio>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="footer-bar">
+    © 2025 CRACK IT! All Rights Reserved.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+

@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathons - CRACK IT!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CRACK IT! | Hackathons</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header class="top-bar">
-        <h1>CRACK IT!</h1>
+    <canvas id="background-canvas"></canvas>
+
+    <header class="header">
+        <div class="branding">
+            <a href="index.html" class="site-title" style="text-decoration:none;">Hackathons</a>
+            <p id="typing-text" style="color:var(--accent-gold);">🚀 Hackathon Programs</p>
+        </div>
+        <div class="scrolling-banner">
+            <div class="scrolling-text">
+                Explore the hackathons and the resources provided to crack them.
+            </div>
+        </div>
     </header>
 
     <main class="main-content">
-        <div class="content-display-area">
-            <div class="content-section">
-                <h2>Hackathon Details</h2>
-
-                <div class="opportunity" style="text-align:left" id="googlegirl-content">
-                    <h3>1.) Google Girl Hackathon</h3>
-                    <p><strong>Registration:</strong> Around Jan-March</p>
-                    <p><strong>About:</strong> Girl Hackathon is a program for women students in computer science and allied courses across India[cite: 163]. [cite_start]It has been designed to provide a platform for women in the engineering campus space to showcase their coding skills and promote creative solutions for real-time technical challenges.</p>
-                    
-                    <h4>Procedure</h4>
-                    <h5>Round 1: Google Online Challenge</h5>
-                    <ul>
-                        <li>The first round is a coding round where 2 questions will be given based on DSA.</li>
-                        <li>Topics covered include stacks, binary search, and bit manipulation.The difficulty level can be LeetCode medium-hard with a time limit of 1 hour to solve both questions.</li>
-                        <li>Participants were judged on their performance in the coding challenge alongside their individual profile screening through resumes.</li>
-                    </ul>
-                    <h5>Round 2: Google Learning Cohorts Workshops</h5>
-                    <ul>
-                        <li>Selected participants from Round 1 were divided into different learning cohorts.</li>
-                        <li>These workshops are followed by a DSA coding round where participants solve 2 questions based on varied topics such as divide & conquer.The time limit is 1 hour and the difficulty is LeetCode medium-hard.</li>
-                    </ul>
-                    <h5>Round 3: Ideathon Round</h5>
-                    <ul>
-                        <li>After the second round, the hackathon enters its pre-final phase.</li>
-                        <li>The primary problem statement is subdivided into 3 themes, and participants are required to choose one and develop a solution for it.</li>
-                    </ul>
-                    <h5>The Grand Finale: Presentation round</h5>
-                    <ul>
-                        <li>For the final presentation, participants create a presentation on Google Slides showcasing their idea along with a demo of the working prototype.</li>
-                    </ul>
-                    <p><strong>Tips:</strong> Keep practicing DSA and give contests to get a stronghold over it.Do not limit yourself to a particular stack; develop an attitude to solve problems through whatever means necessary.</p>
+        <h2 style="color:var(--text-light); text-align:center; margin: 2rem 0;">Select a Hackathon to View Details</h2>
+        
+        <div id="hackathon-guide-container">
+            <!-- Google Girl Hackathon -->
+            <div class="hackathon-block-wrapper">
+                <center>
+                <div class="hackathon-card" data-id="google-girl">Google Girl Hackathon</div>
+                </center>
+                <div id="details-google-girl" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>Google Girl Hackathon is a program for women students in computer science and allied courses across India. It provides a platform to showcase coding skills and propose creative solutions to real-world challenges.</p>
+                    </div>
+                    <div class ="content-section">
+                        <h3>Timeline:</h3>
+                        <p>Registration around Jan-Feb</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <ol>
+                            <li><strong>Round 1: Online Coding Challenge</strong><br> 2 questions (DSA: stacks, binary search, bit manipulation). Difficulty: LeetCode medium-hard. Duration: 1 hour.</li>
+                            <li><strong>Round 2: Learning Cohorts + Coding Challenge</strong><br> Workshops followed by 2 DSA questions. Difficulty: medium-hard.</li>
+                            <li><strong>Round 3: Ideathon</strong><br> Teams choose a theme and propose solutions.</li>
+                            <li><strong>Grand Finale: Presentation</strong><br> Present solution + prototype demo.</li>
+                        </ol>
+                        <p><strong>Tips:</strong> Practice DSA consistently, attempt contests, and keep an open mind about tech stacks.</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="opportunity" style="text-align:left" id="sih-content">
-                    <h3>2.) Smart India Hackathon (SIH)</h3>
-                    <p><strong>About:</strong> Smart India Hackathon (SIH) is a premier nationwide initiative designed to engage students in solving some of the most pressing challenges faced in everyday life.Winners get prize money of 1 lakh.</p>
-                    <h4>Procedure</h4>
-                    <p>The procedure for SIH involves a detailed timeline of events. For a visual representation of the timeline, please refer to the image below.</p>
-                    <img style="height: 300px; width: 100%;" src="myimage.png">
+            <!-- Smart India Hackathon -->
+            <div class="hackathon-block-wrapper">
+                <center>
+                <div class="hackathon-card" data-id="sih">Smart India Hackathon (SIH)</div>
+                </center>
+                <div id="details-sih" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>Smart India Hackathon (SIH) is a nationwide initiative where students solve pressing real-world problems. Winners get prize money of ₹1,00,000.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <p>SIH involves a detailed timeline of events from problem statement release to final presentations. Below is a sample timeline representation:</p>
+                        <img src="myimage.png" alt="SIH Timeline" style="height:300px; width:100%;"/>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer-bar">
-        A simple helpful guide to help you ace tech game
-    </footer>
+    <footer class="footer-bar"></footer>
+
+    <audio id="click-sound" src="audio/click.mp3" preload="auto"></audio>
+    <script src="script.js"></script> 
 </body>
 </html>

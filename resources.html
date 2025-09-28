@@ -1,86 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - CRACK IT!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CRACK IT! | Resources</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header class="top-bar">
-        <h1>CRACK IT!</h1>
+    <canvas id="background-canvas"></canvas>
+
+    <header class="header">
+        <div class="branding">
+            <a href="index.html" class="site-title" style="text-decoration:none;">Resources</a>
+            <p id="typing-text" style="color:var(--accent-gold);">📘 Helpful Resources to Crack It!</p>
+        </div>
+        <div class="scrolling-banner">
+            <div class="scrolling-text">
+                Explore resume tips, OA prep guides, technical sheets, and interview resources.
+            </div>
+        </div>
     </header>
 
     <main class="main-content">
-        <div class="content-display-area">
-            <div class="content-section">
-                <h2>Helpful Resources</h2>
+        <h2 style="color:var(--text-light); text-align:center; margin: 2rem 0;">Choose a Resource Section</h2>
 
-                <div class="opportunity" style="text-align:left" id="resume-content">
+        <div id="resource-guide-container">
+            <!-- Resume Building -->
+            <div class="resource-block-wrapper">
+                <div class="resource-card" data-id="resume">Resume Building</div>
+                <div id="details-resume" class="detail-content">
                     <h3>Resume Building</h3>
-                    <p>A well-crafted resume is your first step to a successful application. Here are some tips to make sure your resume stands out.One can also use the templates available on Overeaf.</p>
-                    
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gbMmHkIK6yQ?si=8rHWOIwEwnlmhuFH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/y3R9e2L8I9E?si=vHnhrga_IEkCopWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="opportunity" style="text-align:left" id="resume-content">
-                    <p>Some useful templates:</p>
-                    
-                    <a href="https://flowcv.com/resume-template/66dd410aab34a77c6e505cb6"> Template1 </a><br>
-                    <a href= "https://www.overleaf.com/6366618219mfystgrmpvzn#191670"> Template2 </a>
-                </div>
-
-                
-                <hr>
-
-                <div class="opportunity" id="oa-content">
-                    <h3>Online Assessment Guide</h3>
-                    <p>Online assessments are a key part of the hiring process. Here are the helpful resources.</p>
-    <h3>Download All Resources</h3>
-    <p>You can download the complete list of placement and internship resources in PDF format by clicking the link below.</p>
-    <a href="PLACEMENT RESOURCES.pdf" target="_blank" class="download-link">Download PDF</a> <br>
-    <a href="https://www.naukri.com/code360/test-series/de-shaw-online-assessment-test-series" target="_blank">Test Series Link(De-Shaw)</a></li><br>
-    <a href="more.pdf" target="_blank" class="download-link">More Resources</a> <br>
-
-    
-                        
-</div>
-
-                                    </div>
-
-                <hr>
-
-                <div class="opportunity" id="technical-content">
-                    <h3>Technical Interview Prep</h3>
-                    <p>Technical interviews are designed to assess your problem-solving mindset and technical skills. A good approach in technical interviews is to communicate your idealogy of solving the questions and the methods used. </p>
-                    <a href="https://docs.google.com/spreadsheets/d/1mvlc8EYc3OVVU3X7NKoC0iZJr_45BL_pVxiJec0r94c/edit?gid=0#gid=0"> Apna college DSA sheet</a>
-                                    </div>
-
-                <hr>
-                
-                <div class="opportunity" id="hr-content">
-                    <h3>HR Interview Guide</h3>
-                    <p>The HR round is to check who you are as a person and how you'll fit into the team.</p>
-
-                    <h4>Preparation is Key</h4>
+                    <p>A well-crafted resume is your first step to a successful application. Use simple formats and highlight projects and achievements. Avoid clutter. You can also use templates on Overleaf.</p>
+                    <h4>Videos</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/gbMmHkIK6yQ?si=8rHWOIwEwnlmhuFH" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/y3R9e2L8I9E?si=vHnhrga_IEkCopWL" frameborder="0" allowfullscreen></iframe>
+                    <h4>Templates</h4>
                     <ul>
-                        <li>Research the company to understand its mission, culture, and recent news.</li>
-                        <li>Carefully read the job description to understand every point and how your skills fulfill the requirements.</li>
-                        <li>Review your resume and prepare to answer questions about it.</li>
+                        <li><a href="https://flowcv.com/resume-template/66dd410aab34a77c6e505cb6" target="_blank">Template 1 (FlowCV)</a></li>
+                        <li><a href="https://www.overleaf.com/6366618219mfystgrmpvzn#191670" target="_blank">Template 2 (Overleaf)</a></li>
                     </ul>
-            	    <a href= "https://in.indeed.com/career-advice/interviewing/hr-intern-interview-questions"> Some sample questions</a><br>
-  		    <a href="https://www.techinterviewhandbook.org/behavioral-interview-questions/"> More questions </a>
+                </div>
+            </div>
 
+            <!-- Online Assessments -->
+            <div class="resource-block-wrapper">
+                <div class="resource-card" data-id="oa">Online Assessment Guide</div>
+                <div id="details-oa" class="detail-content">
+                    <h3>Online Assessment Guide</h3>
+                    <p>Online assessments are a key part of hiring. They usually include aptitude, coding, and computer science fundamentals.</p>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="PLACEMENT RESOURCES.pdf" target="_blank">Placement Resources PDF</a></li>
+                        <li><a href="https://www.naukri.com/code360/test-series/de-shaw-online-assessment-test-series" target="_blank">DeShaw Test Series</a></li>
+                        <li><a href="more.pdf" target="_blank">More Resources</a></li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- Technical Prep -->
+            <div class="resource-block-wrapper">
+                <div class="resource-card" data-id="technical">Technical Interview Prep</div>
+                <div id="details-technical" class="detail-content">
+                    <h3>Technical Interview Prep</h3>
+                    <p>Technical interviews test problem-solving, coding, and core CS knowledge. Communicate your approach while solving problems.</p>
+                    <ul>
+                        <li><a href="https://docs.google.com/spreadsheets/d/1mvlc8EYc3OVVU3X7NKoC0iZJr_45BL_pVxiJec0r94c/edit?gid=0#gid=0" target="_blank">Apna College DSA Sheet</a></li>
+                    </ul>
+                </div>
+            </div>
 
-                                    </div>
+            <!-- HR Interviews -->
+            <div class="resource-block-wrapper">
+                <div class="resource-card" data-id="hr">HR Interview Guide</div>
+                <div id="details-hr" class="detail-content">
+                    <h3>HR Interview Guide</h3>
+                    <p>The HR round focuses on personality, communication, and culture fit.</p>
+                    <h4>Preparation Tips</h4>
+                    <ul>
+                        <li>Research the company and role thoroughly.</li>
+                        <li>Review your resume and anticipate related questions.</li>
+                        <li>Be clear, concise, and confident.</li>
+                    </ul>
+                    <h4>Sample Questions</h4>
+                    <ul>
+                        <li><a href="https://in.indeed.com/career-advice/interviewing/hr-intern-interview-questions" target="_blank">Indeed: Sample HR Questions</a></li>
+                        <li><a href="https://www.techinterviewhandbook.org/behavioral-interview-questions/" target="_blank">Tech Interview Handbook</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
 
     <footer class="footer-bar">
-        A simple helpful guide to help you ace tech game!
+    
     </footer>
+
+    <audio id="click-sound" src="audio/click.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
 </body>
 </html>

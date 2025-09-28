@@ -1,146 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internships - CRACK IT!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CRACK IT! | Internships</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header class="top-bar">
-        <h1>CRACK IT!</h1>
+    <canvas id="background-canvas"></canvas>
+
+    <header class="header">
+        <div class="branding">
+            <a href="index.html" class="site-title" style="text-decoration:none;">Internships</a>
+            <p id="typing-text" style="color:var(--accent-gold);">🚀 Internship Programs</p>
+        </div>
+        <div class="scrolling-banner">
+            <div class="scrolling-text">
+                Explore the internship programs and the resources provided to crack them.
+            </div>
+        </div>
     </header>
 
     <main class="main-content">
-        <div class="content-display-area">
-            <div class="content-section">
-                <h2>Internship Opportunities</h2>
+        <h2 style="color:var(--text-light); text-align:center; margin: 2rem 0;">Select a Program to View Details</h2>
+        
 
-                <div class="opportunity" id="deshaw-content">
-                    <h3 style="text-align:left">1.) Deshaw Desis Ascend</h3>
-                    <p style="text-align:left"><strong>Timeline:</strong> August-September [off campus] </p>
-                    <p style="text-align:left"><strong>About:</strong> D.E. Shaw is a global investment and technology development firm founded in 1998. The Ascend Educare Program is a six-month mentorship initiative for women in tech, launched in 2021. Through this program, students gain a better understanding of work culture and real-world projects at D.E. Shaw. Additionally, D.E. Shaw provides a stipend of approximately INR 50,000 for the entire duration of the program.</p>
-                    
-                   <h4 style="text-align:left">Eligibility Criteria </h4>
-                    <ul style="text-align:left">
-                        <li>The Ascend Educare Program is only for women in engineering and is not open to male students.</li>
-                        <li>Second- and third-year female students of B.Tech/B.E. programs are eligible.</li>
-                        <li>Third- and fourth-year students in a five-year dual degree program are eligible.</li>
-                        <li>First-year students in a two-year M.Tech/MS/MCA program are eligible.</li>
-                        <li>Second-year students in a three-year MCA program are also eligible.</li>
-                    </ul>
-
-                    <h4 >Procedure </h4>
-                    <h5>Round 1: Resume Shortlisting </h5>
-                    <p style="text-align:left">This is an elimination round, where your resume plays a crucial role.If your resume is shortlisted, you advance to Round 2. This step also involves completing a detailed form that asks for personal details, college information, relevant transcripts, and responses to essay questions.</p>
-                    <p style="text-align:left"><strong>Tips:</strong> Do not write fake things in order to get the opportunity, highlight your skills and projects done till then.</p>
-                    <h5>Round 2: HackerRank Online Test </h5>
-                   <p style="text-align:left">This test was taken on HackerRank with proctoring. It comprised of three sections: Aptitude, Computer Science Fundamentals(time complexity related ques, DBMS and OOPS), and Coding(around three questions of medium to hard level difficulty). The aptitude questions included topics from probability, profit, and loss, covering most of the syllabus of quantitative aptitude. The coding section consisted of three coding questions which were of medium to hard difficulty level.One of the questions was very tough, and students who completed even half of this question were invited for further rounds.</p>
-                    <p style="text-align:left"><strong>Tips:</strong> For coding questions, practicing on platforms like Leetcode can help build a basic understanding and a problem-tackling approach.</p>
-                    <h5>Round 3: Technical and HR Interview </h5>
-                    <p style="text-align:left">This round lasts about 45 minutes. The interviewer can ask for an introduction, followed by coding questions of medium to hard difficulty.Topics included linked lists and graphs.In the HR interview, questions testing soft skills will be asked.</p>
-                    <p style="text-align:left"><strong>Tips for HR/Personal Interview:</strong> Questions that can be asked include "Introduce Yourself," "How do you plan to manage the workload of this program alongside your college studies?", and "What qualities or attributes set you apart as the ideal candidate for this program?".</p>
-                </div>
-
-                <div class="opportunity" style="text-align:left" id="google-step content">
-                    <h3>2.) Google STEP</h3>
-                   <p><strong>Timeline:</strong> November - December [off+on campus]</p>
-                   <p><strong>About:</strong> The Google STEP (Student Training in Engineering Program) internship is a 12-week summer program designed for first and second-year undergraduate students in technical fields, particularly computer science. It provides hands-on experience with real Google projects, mentorship from experienced engineers, and opportunities to develop both technical and professional skills.</p>
-                    
-                    <h4>Procedure </h4>
-                    <ul>
-                        <li><strong>A robust Resume:</strong> A good resume is crucial to get you through the initial stage of the internship. It should contain all important details and be clean and concise.</li>
-                        <p><strong>Tips:</strong> You can use Overleaf for resume building.</p>
-                        <li><strong>Telephonic follow-up:</strong> Some of the questions can include your preferred language, and questions related to the projects mentioned in your resume.</li>
-                        <li><strong>Final Interview:</strong> It takes place in two rounds. A helpful tip for the interviews is to communicate clearly and mention the approaches that you are following to solve the question.</li>
-                    </ul>
-                    <p><strong>Tips:</strong> Practice mock interviews (technical + behavioral).Study topics like arrays, linked lists, trees, and graphs, etc.Communication is just as important as coding skills during interviews. You can also use Overleaf for resume building.</p>
-                </div>
-                
-                <div class="opportunity" style="text-align:left" id="uber-star-content">
-                    <h3>3.) Uber Star</h3>
-                    <p><strong>Timeline:</strong> January [on campus] </p>
-                  <p><strong>About:</strong> She++ is a professional development summit hosted by Uber to empower women and people from underserved communities in Denmark, Brazil, India and the Netherlands to find and achieve their career ambitions. </p>
-
-                    <h4>Eligibility </h4>
-                    <ul>
-                        <li>Must be in Computer Science, Engineering, or related Software Engineering fields.</li>
-                        <li>Must be a 2nd and 3rd year student who identifies as female, a person with disabilities, or LGBTQIA+.</li>
-                        <li>Must be attending an accredited engineering college or university.</li>
-                    </ul>
-                    <h4>Procedure</h4>
-                    <ul>
-                        <li><strong>Application Screening:</strong> After submitting the application, candidates undergo an initial screening based on their academic performance, relevant experience, and overall profile.</li>
-                       <li><strong>Online Assessment:</strong> Shortlisted students take a coding test of 1 hour and 30 minutes to solve four questions related to coding general CS fundamentals and DSA.</li>
-                        <li><strong>Hiring Manager Interview:</strong> Those selected for the Uber She++ program can appear directly for a hiring manager interview for the Uber STAR internship program.</li>
-                        <li>There is no stipend for the She++ program. She++ participants get an opportunity to appear directly for a hiring manager interview for the Uber STAR internship program. If selected, they can get a stipend of up to INR 1,00,000 per month.</li>
-                    </ul>
-                    <p><strong>Tips:</strong> Build some good projects showcasing the skills you mentioned in your resume. Practice coding regularly.In an interview, stick to what you know.</p>
-                </div>
-
-                <div class="opportunity" style="text-align:left" id="linkedin-content">
-                    <h3>4.) LinkedIn Coachin</h3>
-                    <p><strong>Timeline:</strong> January-February [off+on campus] </p>
-                   <p><strong>About:</strong> CoachIn is a mentorship program by LinkedIn. All women engineering students across India in the B.Tech course (2nd-year college students) with at least 70% CGPA were eligible for the program.</p>
-                    <h4>Procedure </h4>
-                    <ul>
-                        <li><strong>Registration:</strong> It requires basic information like name, college name, specialization, graduation year, and LinkedIn profile.</li>
-                        <li><strong>Hackerrank Test:</strong> This test will have around three coding questions of easy to medium level.</li>
-                        <li><strong>Phone Screening Round:</strong> The final round is a phone call asking basic questions like why you want to join the program, what keeps you moving forward, and your experience with open source.</li>
-                    </ul>
-                    <p><strong>Tips:</strong> The LinkedIn profile was a major factor, so you need to polish your LinkedIn profile before applying. Good DSA skills are needed to clear the coding round.In the Phone Screening Round, be honest, clear, and concise in what you are speaking.</p>
-                </div>
-                
-                <div class="opportunity" style="text-align:left" id="cisco-content">
-                    <h3>5.) Cisco CWIP</h3>
-                    <p><strong>Timeline:</strong> February [on campus]</p>
-                    <p><strong>About:</strong> The Cisco Women Internship Program (CWIP) is a new initiative designed to empower female engineering students nearing the end of their second year. This two-month internship offers you the chance to enhance your skills and gain invaluable industry exposure early in your academic journey.</p>
-                    <h4>Eligibility </h4>
-                    <ul>
-                        <li>Must be currently in the 4th semester of your degree.</li>
-                        <li>Can be from any branch and specialization.</li>
-                        <li>Should not have any current backlogs.</li>
-                    </ul>
-                    <h4>Procedure</h4>
-                    <ul>
-                        <li>Registrations </li>
-                        <li>Online assessment </li>
-                        <li>Interview process</li>
-                        <li>Two-month internship with Cisco </li>
-                    </ul>
-                    <p><strong>Tips:</strong> Practice LeetCode questions and the Arsh sheet for DSA.</p>
-                </div>
-
-                <div class="opportunity" style="text-align:left" id="jpmc-content">
-                    <h3>6.) JPMC SEP</h3>
-                    <p><strong>Timeline:</strong> March [for 3rd year internship]</p>
-                    <p><strong>About:</strong> This program is for 3rd year internship students.Like most of internships, it begins with submitting your resume.</p>
-                   <h4>Procedure</h4>
-                    <ul>
-                        <li><strong>First Round:</strong> An online assessment with around two coding problems to be done in 45 minutes. Example questions that were asked include a dynamic programming (DP) problem and a greedy algorithm problem.</li>
-                        <li><strong>Round 2:</strong> A behavioral interview focused on assessing soft skills, problem-solving mindset, and cultural fit.Questions were unique for each candidate and included scenarios like "Give a recent example where you learned and gained experience" and "Describe a situation where you felt you had not communicated well".</li>
-                        <li><strong>Round 3:</strong> An invitation to participate in the Code for Good Hackathon held at JPMC’s office.The hackathon required solving a real-world problem statement.</li>
-                    </ul>
-                </div>
-                
-                <div class="opportunity" style="text-align:left" id="microsoft-content">
-                    <h3>7.) Microsoft Explorer Internship Program</h3>
-                    <p><strong>About:</strong> Explore Microsoft is an 8-week summer internship program specifically designed for first- and/or second-year college students.The program allows the opportunity to experience the product development cycle's primary phases: Design, Build and Quality.</p>
-                    <h4>Procedure </h4>
-                    <ul>
-                        <li>It starts with selection through your resume.</li>
-                        <li>The initial interview is one 30-minute phone call.These vary in structure, but mostly behavioral questions are asked.However, it is a best practice to also practice coding just in case.</li>
-                        <li>The final round consists of 2 (45-minute) rounds with 1 interviewer each.Each interview is expected to give one programming question each.</li>
-                    </ul>
-                    <p><strong>Tips:</strong> Most people haven’t done their Data Structures and Algorithms course by initial interview stage, so there are a limited number of topics you need to cover: Strings, Arrays, Dictionaries/HashMaps, Linked Lists, and Binary Trees.For questions, solve LeetCode.</p>
+        <div id="internship-guide-container">
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="deshaw">Deshaw Desis Ascend</div>
+                <div id="details-deshaw" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>D.E. Shaw is a global investment and technology development firm founded in 1998.Through this program, students gain a better understanding of work culture and real-world projects at D.E. Shaw. Additionally, D.E. Shaw provides a stipend of approximately INR 50,000 for the entire duration of the program.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Timeline</h3>
+                        <p>August - September</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <h4>Eligibility Criteria</h4>
+                        <ul>
+                        <p>The Ascend Educare Program is only for women in engineering and is not open to male students. The eligibility requirements are as follows:</p>
+                             <li>second- and third-year female students of B.Tech/B.E. programs</li>
+                             <li> Third- and fourth-year students in a five-year dual degree program</li>
+                             <li>First-year students in a two-year M.Tech/MS/MCA program</li>
+                             <li> Second-year students in a three-year MCA program</li>
+                        </ul>
+                        <h4>Program Rounds</h4>
+                        <ul>
+                            <li><strong>Round 1: Resume Shortlisting</strong><br>
+                                This is an elimination round, where your resume plays a crucial role. If your resume is shortlisted, you advance to Round 2.<br>
+                                <strong>Tips:</strong> Do not write fake things in order to get the opportunity; highlight your skills and projects done till then.
+                            </li>
+                            <li><strong>Round 2: HackerRank Online Test</strong><br>
+                                This test is taken on HackerRank with proctoring and comprises three sections. Section 1 is Aptitude, with medium-hard difficulty questions from probability, profit and loss, and quantitative aptitude. Section 2 is Computer Science Fundamentals, with questions on time complexity, DBMS, OOPs, and some bug-finding questions. Section 3 is Coding, with three medium-to-hard difficulty questions. One question was very tough, and students who completed even half of it were invited for further rounds.<br>
+                                <strong>Tips:</strong> For coding questions, practicing on platforms like Leetcode can help build basic understanding and the problem-tackling approach.
+                            </li>
+                            <li><strong>Round 3: Technical and HR Interview</strong><br>
+                                Only a few reach the interview stage, and this round lasts about 45 minutes. The interviewer may ask for an introduction, followed by medium-to-hard coding questions on topics like linked lists and graphs. The HR interview includes questions testing soft skills.<br>
+                                <strong>Tips:</strong> Questions that can be asked in the HR or personal interview include "Introduce Yourself," "How do you plan to manage the workload of this program alongside your college studies?" and questions about handling difficult project situations or explaining technical concepts.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="google-step">Google STEP</div>
+                <div id="details-google-step" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>The Google STEP (Student Training in Engineering Program) is a 12-week summer program for first- and second-year undergraduate students in technical fields, particularly computer science. The program provides hands-on experience with real Google projects, mentorship, and opportunities to develop both technical and professional skills.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <h4>A robust Resume</h4>
+                        <p>A good resume is crucial to get through the initial stage and should include important details like contact information, GitHub URL, and LinkedIn profile URL.</p>
+                        <h4>Telephonic follow-up</h4>
+                        <p>Some of the favorable questions include preferred language and questions related to the projects mentioned in your resume.</p>
+                        <h4>Final Interview</h4>
+                        <p>It takes place in two rounds, and a helpful tip is to communicate clearly and mention the approaches you're following to solve the question.<br>
+                           <strong>Tips:</strong> Practice mock interviews, study topics like arrays, linked lists, trees, and graphs, and remember that communication is just as important as coding skills during interviews.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="uber-star">Uber Star</div>
+                <div id="details-uber-star" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>She++ is a professional development summit hosted by Uber to empower women and people from underserved communities in Denmark, Brazil, India, and the Netherlands to find and achieve their career ambitions, fostering a community for the next generation in tech.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Eligibility</h3>
+                        <ul>
+                            <li>Computer Science, Engineering, or related Software Engineering fields.</li>
+                            <li>Second- and third-year students who identify as female, people with disabilities, or LGBTQIA+.</li>
+                            <li>Must be attending an accredited engineering college or university.</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <ol>
+                            <li><strong>Application Screening:</strong> Candidates undergo an initial screening based on their academic performance, relevant experience, and overall profile.</li>
+                            <li><strong>Online Assessment:</strong> Shortlisted students take a coding test with four questions of varying difficulty, which are related to coding, general CS fundamentals, and DSA.</li>
+                            <li><strong>Hiring Manager Interview:</strong> Those selected for the Uber She++ program can appear directly for a hiring manager interview for the Uber STAR internship program.</li>
+                        </ol>
+                        <p><strong>Note:</strong> There is no stipend for the She++ program. She++ participants get an opportunity to appear directly for a hiring manager interview for the Uber STAR internship program. If selected, they can get a stipend of up to INR 1,00,000 per month.</p>
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Build good projects to showcase the skills mentioned in your resume.</li>
+                            <li>Practice coding regularly.</li>
+                            <li>In the interview, stick to what you know.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="linkedin-coachin">LinkedIn CoachIn</div>
+                <div id="details-linkedin-coachin" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>CoachIn is a mentorship program by LinkedIn. It is open to all women engineering students across India who are in their second year of a B.Tech course with at least a 70% CGPA.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <ol>
+                            <li><strong>Registration:</strong> This requires basic information like name, college name, specialization, graduation year, and LinkedIn profile.</li>
+                            <li><strong>Hackerrank Test:</strong> The test will have around three coding questions of easy to medium level.</li>
+                            <li><strong>Phone Screening Round:</strong> The final round is a phone call asking basic questions like why you want to join the program, what keeps you moving forward, and your experience with open source.</li>
+                        </ol>
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Your LinkedIn profile is a major factor, so you need to polish it before applying and get it reviewed.</li>
+                            <li>Good DSA skills are needed to clear the coding round.</li>
+                            <li>For the Phone Screening Round, be honest, clear, and concise in what you are speaking.</li>
+                            <li>Actively participate in all sessions, follow the learning path, and take mock tests and interviews seriously.</li>
+                            <li>Be interactive with your peers and mentor; your mentor is there to help and offer advice.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="cisco-cwip">Cisco CWIP</div>
+                <div id="details-cisco-cwip" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>The Cisco Women Internship Program (CWIP) is a new initiative designed to empower female engineering students nearing the end of their second year. This two-month internship offers you the chance to enhance your skills and gain invaluable industry exposure early in your academic journey.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Eligibility</h3>
+                        <ul>
+                            <li>Currently in the 4th semester of your degree.</li>
+                            <li>Any branch and specialization.</li>
+                            <li>Should not have any current backlogs.</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <ul>
+                            <li>Registrations.</li>
+                            <li>Online assessment.</li>
+                            <li>Interview process.</li>
+                            <li>Two-month internship with Cisco.</li>
+                            <li><strong>Tips:</strong> Practice LeetCode questions and the Arsh sheet for DSA.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="jpmc-sep">JPMC SEP</div>
+                <div id="details-jpmc-sep" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>JPMC SEP is a program for third-year students.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <ol>
+                            <li><strong>First Round:</strong> Like most internships, it begins with submitting your resume. The first round is an online assessment consisting of two coding problems to be done in 45 minutes. The questions were dynamic programming and greedy algorithm problems of a medium level.</li>
+                            <li><strong>Round 2: Behavioral Interview:</strong> This interview focuses on assessing soft skills, problem-solving mindset, and cultural fit. The questions are unique and include scenarios about learning from recent experiences, career goals, and communication skills.</li>
+                            <li><strong>Round 3: Code for Good Hackathon:</strong> The process ends with an invitation to participate in the Code for Good Hackathon held at JPMC’s office, which involves solving a real-world problem statement.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="internship-block-wrapper">
+                <div class="internship-card" data-id="microsoft-explorer">Microsoft Explorer Internship</div>
+                <div id="details-microsoft-explorer" class="detail-content">
+                    <div class="content-section">
+                        <h3>About</h3>
+                        <p>Explore Microsoft is an 8-week summer internship program for first- and second-year college students. The program provides the opportunity to experience the product development cycle's primary phases: Design, Build, and Quality.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Procedure</h3>
+                        <ol>
+                            <li>It starts with selection through your resume.</li>
+                            <li>The initial interview is a 30-minute phone call, which mostly consists of behavioral questions. It is best practice to also practice coding just in case.<br>
+                                <strong>Tips:</strong> Since most people haven’t done their Data Structures and Algorithms course by this stage, a limited number of topics need to be covered, such as Strings, Arrays, Dictionaries/HashMaps, Linked Lists, and Binary Trees.
+                            </li>
+                            <li>The final round consists of two 45-minute interviews with one programming question each.<br>
+                                <strong>Tips:</strong> For questions, solve LeetCode problems.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
     </main>
+    
+    <footer class="footer-bar"></footer>
 
-    <footer class="footer-bar">
-        A simple helpful guide to help you ace tech game!
-    </footer>
+    <audio id="click-sound" src="audio/click.mp3" preload="auto"></audio>
+    <script src="internships.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
