@@ -2,6 +2,29 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ---------- Helper: Uniform Particle Generator ----------
+    function createUniformParticles(canvas, count) {
+        const particles = [];
+        const cols = Math.ceil(Math.sqrt(count));
+        const rows = Math.ceil(count / cols);
+        const xSpacing = canvas.width / cols;
+        const ySpacing = canvas.height / rows;
+
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                if (particles.length < count) {
+                    particles.push({
+                        x: j * xSpacing + (Math.random() * xSpacing * 0.5),
+                        y: i * ySpacing + (Math.random() * ySpacing * 0.5),
+                        r: Math.random() * 2 + 1,
+                        d: Math.random() * 2
+                    });
+                }
+            }
+        }
+        return particles;
+    }
+
     // ---------- Preloader with Particles ----------
     const overlay = document.getElementById('loading-overlay');
     const preloaderCanvas = document.getElementById('preloader-canvas');
@@ -10,15 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         preloaderCanvas.width = overlay.offsetWidth;
         preloaderCanvas.height = overlay.offsetHeight;
 
-        const particles = [];
-        for (let i = 0; i < 40; i++) {
-            particles.push({
-                x: Math.random() * preloaderCanvas.width,
-                y: Math.random() * preloaderCanvas.height,
-                r: Math.random() * 2 + 1,
-                d: Math.random() * 2
-            });
-        }
+        const particles = createUniformParticles(preloaderCanvas, 80); // more particles
 
         let angle = 0;
         function drawParticles() {
@@ -95,17 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
             bgCanvas.height = window.innerHeight;
         }
         resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            bgParticles.length = 0; // reset
+            bgParticles.push(...createUniformParticles(bgCanvas, 150)); // regenerate
+        });
 
-        const bgParticles = [];
-        for (let i = 0; i < 60; i++) {
-            bgParticles.push({
-                x: Math.random() * bgCanvas.width,
-                y: Math.random() * bgCanvas.height,
-                r: Math.random() * 2 + 1,
-                d: Math.random() * 2
-            });
-        }
+        const bgParticles = createUniformParticles(bgCanvas, 150);
 
         let bgAngle = 0;
         function drawBgParticles() {
@@ -178,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => {
         card.addEventListener("click", () => {
-            // play sound if available
             if (clickSound) {
                 clickSound.currentTime = 0;
                 clickSound.play();
@@ -187,7 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const id = card.getAttribute("data-id");
             const target = document.getElementById(`details-${id}`);
 
-            // toggle visibility
             details.forEach(d => {
                 if (d === target) {
                     d.style.display = d.style.display === "block" ? "none" : "block";
@@ -198,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".resource-card");
     const details = document.querySelectorAll(".detail-content");
@@ -205,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => {
         card.addEventListener("click", () => {
-            // play click sound
             if (clickSound) {
                 clickSound.currentTime = 0;
                 clickSound.play();
@@ -218,11 +227,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (d === target) {
                     d.style.display = d.style.display === "block" ? "none" : "block";
                 } else {
-                    d.style.display = "none"; // close others
+                    d.style.display = "none"; 
                 }
             });
 
-            // scroll into view so content is accessible
             if (target.style.display === "block") {
                 target.scrollIntoView({ behavior: "smooth", block: "start" });
             }
