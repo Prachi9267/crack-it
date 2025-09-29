@@ -137,6 +137,7 @@ body {
   max-width: 1000px;
   padding: 0 1rem;
   flex-wrap: wrap; /* stack on smaller screens */
+  margin-top: -20px;
 }
 
 .content-box {
